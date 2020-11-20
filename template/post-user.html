@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发表文章</title>
+    <meta name="viewport" content="width=device-width,initila-scale=1"/>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/woniunote.css">
+    <script src="/js/jquery-3.4.1.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/ue/ueditor.config.js"></script>
+    <script type="text/javascript" src="/ue/ueditor.all.min.js"></script>
+    <script type="text/javascript" src="/ue/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript">
+        var ue=UE.getEditor("content",{
+            initialFrameHeight:400,
+
+
+
+        });
+    </script>
+
+</head>
+<body>
+    <div class="header">
+        <div class="container" >
+            <div class="row">
+                <div class="col-5" style="padding-top: 10px;"><img src="/img/logo-note.png" alt="" width="190px "></div>
+                <div class="col-7 d-none d-sm-block"  style="text-align: right;padding-top: 10px;">
+                    <h2>以蜗牛之名，行学习之实</h2>
+                </div>
+                <div class="col-7 d-sm-none" style="text-align: right;padding-top: 10px;">
+                    <h2>技术博客</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu" style="margin-top: 10px;">
+        <div class="container" style="background-color: #563d7c">
+        <nav class="navbar navbar-expand-lg navbar-dark menu-bar" style="background-color: #563d7c">
+            <a class="navbar-brand" href="#">快捷导航</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                      <li style="float:left;margin-right:20px;"><a style="padding:0;" id="typephp" href="/note/php-1">PHP开发</a></li>
+                      <li style="float:left;margin-right:20px;"><a style="padding:0;" id="typejava" href="/note/java-1">Java开发</a></li>
+                      <li style="float:left;margin-right:20px;"><a style="padding:0;" id="typepython" href="/note/python-1">Python开发</a></li>
+                      <li style="float:left;margin-right:20px;"><a style="padding:0;" id="typeweb" href="/note/web-1">Web前端</a></li>
+                      <li style="float:left;margin-right:20px;"><a style="padding:0;" id="typetest" href="/note/test-1">测试开发</a></li>
+                      <li style="float:left;margin-right:20px;"><a style="padding:0;" id="typeai" href="/note/ai-1">数据科学</a></li>
+                      <li style="float:left;margin-right:20px;"><a style="padding:0;" id="typesecurity" href="/note/security-1">网络安全</a></li>
+                      <li style="float:left;margin-right:20px;"><a style="padding:0;" id="typeschool" href="/note/school-1">学院动态</a></li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                      <li style="float:left;margin-right:20px;"><a style="padding:0;" id="typephp" href="#" data-toggle="modal" data-target="#staticBackdrop">登录</a></li>
+                      <li style="float:left;margin-right:20px;"><a style="padding:0;" id="typejava" href="/note/php-1">注册</a></li>
+                      <li style="float:left;margin-right:20px;"><a style="padding:0;" id="typepython" href="/note/php-1">用户中心</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">文章标题
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-12">
+                <script type="text/plain" id="content"></script>
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+</html>

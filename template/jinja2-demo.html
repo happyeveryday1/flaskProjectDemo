@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jinja模板页面</title>
+</head>
+<body>
+    <div>
+        <span>你的登录账号为:{{session.get('username')}}</span><br>
+        <span>这篇文章的标题:{{article.title}}</span><br>
+        <span>文章的阅读次数:{{article.count+1}}</span>
+    </div>
+    <div>
+        {% if count%2==0 %}
+        <p>count可以被2整除，该数是偶数</p>
+        {% else %}
+        <p>count不可以被2整除，该数是奇数</p>
+        {%endif%}
+
+        {%set loop=count/10 %}  {#loop的值为10.0，是float类型#}
+        {# 强制转换int类型   int(loop),默认情况下，jinja2模板页面中不能调用Python的内置函数#}
+        {% set intloop=loop|int %}  {#使用过滤器强制转换为int型#}
+        {%for i in range(intloop)%}
+        <p>当前循环到第{{i+1}}行</p>
+        {%endfor%}
+        <span>{{color|length}}</span><br>
+        <span>{{color|safe}}</span><br>
+    </div>
+
+    <div>
+        {{gettype}}<br>
+        {{gettype['2']}}<br><br>
+
+        {{mytype()}}<br>
+        {{mytype()['2']}}
+    </div>
+
+</body>
+</html>
